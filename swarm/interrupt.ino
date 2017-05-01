@@ -43,9 +43,9 @@ void calculateRPM(){
   curr_pos_x+=(Dc*cos(theta));
   curr_pos_y+=(Dc*sin(theta));
   
-//  Serial.print(ext_counterA);
-//  Serial.print("\t");
-//  Serial.println(ext_counterB);
+  //Serial.print(curr_pos_x);
+  //Serial.print("\t");
+  //Serial.println(curr_pos_y);
   
   ext_counterA=0;
   ext_counterB=0;
