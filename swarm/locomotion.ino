@@ -44,13 +44,6 @@ void backward() {
   digitalWrite(InputAB, HIGH);
 }
 
-void freeRun() {
-  digitalWrite(InputAA, LOW);
-  digitalWrite(InputBA, LOW);
-  digitalWrite(InputBB, LOW);
-  digitalWrite(InputAB, LOW);
-}
-
 void brake() {
   motion_direction=6;
   digitalWrite(InputAA, HIGH);
@@ -58,3 +51,27 @@ void brake() {
   digitalWrite(InputBB, HIGH);
   digitalWrite(InputAB, HIGH);
 }
+
+void motorA_forward(){
+  motion_directionA=1;
+  digitalWrite(InputAA, HIGH);
+  digitalWrite(InputBB, LOW);
+  }
+
+void motorB_forward(){
+  motion_directionB=1;
+  digitalWrite(InputAB, HIGH);
+  digitalWrite(InputBA, LOW);
+  }
+
+void motorA_backward(){
+  motion_directionA=0;
+  digitalWrite(InputAA, LOW);
+  digitalWrite(InputBB, HIGH);
+  }
+
+void motorB_backward(){
+  motion_directionB=0;
+  digitalWrite(InputAB, LOW);
+  digitalWrite(InputBA, HIGH);
+  }
